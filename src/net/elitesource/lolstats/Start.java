@@ -22,6 +22,13 @@ public class Start
 
 	public static void main(String[] args)
 	{
+
+		Class<?>[] classes = Champion.class.getClasses();
+		for (int ij = 0; ij < classes.length; ij++)
+		{
+			System.out.println(classes[ij].getName());
+		}
+
 		Field[] fields = ChampionList.class.getDeclaredFields();
 		ArrayList<Champion> champions = new ArrayList<Champion>();
 		for (int i = 0; i < fields.length; i++)
