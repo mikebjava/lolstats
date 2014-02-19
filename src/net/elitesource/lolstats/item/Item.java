@@ -1,16 +1,37 @@
 package net.elitesource.lolstats.item;
+
 import java.io.Serializable;
 import java.util.HashMap;
-public class Item implements Serializable {
+
+import net.elitesource.lolstats.champion.ChampionInstance;
+
+public class Item implements Serializable
+{
 	private static final long serialVersionUID = -7429257977594274208L;
-	private HashMap<ItemType, Float> itemStats;
-	public Item(HashMap<ItemType, Float> itemStats) {
-		
+	private HashMap<StatType, Float> itemStats;
+
+	public Item(HashMap<StatType, Float> itemStats)
+	{
+		this.itemStats = itemStats;
 	}
-	public HashMap<ItemType, Float> getItemStats() {
+
+	public void equip(ChampionInstance c)
+	{
+		// TODO Equip()
+	}
+
+	public void unequip(ChampionInstance c)
+	{
+		// TODO Unequip()
+	}
+
+	public HashMap<StatType, Float> getItemStats()
+	{
 		return itemStats;
 	}
-	public void setItemStats(HashMap<ItemType, Float> itemStats) {
+
+	public void setItemStats(HashMap<StatType, Float> itemStats)
+	{
 		this.itemStats = itemStats;
 	}
 }
